@@ -5,76 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="">
+  <body class="flex justify-center">
    
     <!-- mobile-first -->
 
     <main class="flex flex-col max-w-md h-screen">
         <section class="bg-black my-auto h-[80%] w-full grid grid-rows-[12rem_1fr] gap-2">
             <header class="flex justify-center items-center">
-              <div class="bg-white w-[85%] h-[50%] flex items-center text-7xl px-3">
-                Test
-              </div>
+                <input type="text" name="txtDisplay" id="display" class="bg-white w-[82%] h-[50%] text-right text-7xl px-3" disabled >
             </header>
             <section  class="grid grid-cols-4 px-10 pb-15 gap-1">
+
               <div class="bg-white flex justify-center items-center text-5xl col-span-2">
-                <div class="">Clear</div>
+                <div> Clear </div>
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class=""><<</div>
+               <div> < </div>
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">÷</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="÷" onclick="operatorClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">7</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="7" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">8</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="8" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">9</div>
+               <input class="w-full h-full cursor-pointer" type="button" value="9" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">x</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="x" onclick="operatorClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">4</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="4" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">5</div>
+               <input class="w-full h-full cursor-pointer" type="button" value="5" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">6</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="6" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">-</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="-" onclick="operatorClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">1</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="1" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">2</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="2" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">3</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="3" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">+</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="+" onclick="operatorClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl ">
-                <div class="">.</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="." onclick="numberClick(this);">
               </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <div class="">0</div>
+              <div class="bg-white flex justify-center items-center text-5xl" >
+                <input class="w-full h-full cursor-pointer" type="button" value="0" onclick="numberClick(this);">
               </div>
               <div class="bg-white flex justify-center items-center text-5xl col-span-2">
-                <div class="">=</div>
+                <input class="w-full h-full cursor-pointer" type="button" value="=" onclick="equalClick();">
               </div>
 
             </section>
         </section>
     </main>    
+
+    <script>
+
+      const display = document.getElementById('display');
+
+      function numberClick(n){
+        display.value += n.value;
+        display.scrollLeft = display.scrollWidth;
+      }
+
+      function operatorClick(o){
+        display.value += o.value;
+        display.scrollLeft = display.scrollWidth;
+      }
+
+      function equalClick(){
+        display.value = eval(display.value);
+      }
+      
+    </script>
 
   </body>
 </html>
