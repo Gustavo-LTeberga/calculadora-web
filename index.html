@@ -1,99 +1,133 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="flex justify-center">
-   
-    <!-- mobile-first -->
 
-    <main class="flex flex-col max-w-md h-screen">
-        <section class="bg-black my-auto h-[80%] w-full grid grid-rows-[12rem_1fr] gap-2">
-            <header class="flex justify-center items-center">
-                <input type="text" name="txtDisplay" id="display" class="bg-white w-[82%] h-[50%] text-right text-7xl px-3" disabled >
-            </header>
-            <section  class="grid grid-cols-4 px-10 pb-15 gap-1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-              <div class="bg-white flex justify-center items-center text-5xl col-span-2">
-                <div> Clear </div>
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-               <div> < </div>
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="÷" onclick="operatorClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="7" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="8" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-               <input class="w-full h-full cursor-pointer" type="button" value="9" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="x" onclick="operatorClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="4" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-               <input class="w-full h-full cursor-pointer" type="button" value="5" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="6" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="-" onclick="operatorClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="1" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="2" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="3" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl">
-                <input class="w-full h-full cursor-pointer" type="button" value="+" onclick="operatorClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl ">
-                <input class="w-full h-full cursor-pointer" type="button" value="." onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl" >
-                <input class="w-full h-full cursor-pointer" type="button" value="0" onclick="numberClick(this);">
-              </div>
-              <div class="bg-white flex justify-center items-center text-5xl col-span-2">
-                <input class="w-full h-full cursor-pointer" type="button" value="=" onclick="equalClick();">
-              </div>
+<body class="flex justify-center">
 
-            </section>
-        </section>
-    </main>    
+  <!-- mobile-first -->
 
-    <script>
+  <main class="flex flex-col max-w-md h-screen">
+    <section class="bg-black my-auto h-[80%] w-full grid grid-rows-[12rem_1fr] gap-2">
+      <header class="flex justify-center items-center">
+        <input type="text" name="txtDisplay" id="display" class="bg-white w-[82%] h-[50%] text-right text-7xl px-3"
+          disabled>
+      </header>
+      <section class="grid grid-cols-4 px-10 pb-15 gap-1">
 
-      const display = document.getElementById('display');
+        <div class="bg-white flex justify-center items-center text-5xl col-span-2 ">
+          <input class="w-full h-full cursor-pointer " type="button" value="C" onclick="clearDisplay();">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <div>
+            < </div>
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="÷" onclick="operatorClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="7" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="8" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="9" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="x" onclick="operatorClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="4" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="5" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="6" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="-" onclick="operatorClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="1" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="2" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="3" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="+" onclick="operatorClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl ">
+            <input class="w-full h-full cursor-pointer" type="button" value="." onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl">
+            <input class="w-full h-full cursor-pointer" type="button" value="0" onclick="numberClick(this);">
+          </div>
+          <div class="bg-white flex justify-center items-center text-5xl col-span-2">
+            <input class="w-full h-full cursor-pointer" id="equal" type="button" value="=" onclick="equalClick();">
+          </div>
 
-      function numberClick(n){
+      </section>
+    </section>
+  </main>
+
+  <script>
+
+    const display = document.getElementById('display');
+    const btnEqual = document.getElementById('equal');
+
+    btnEqual.disabled = true;
+    let operatorClicked = true;
+    let countNumber = 0;
+
+
+
+    function numberClick(n) {
+      if (countNumber < 7) {
         display.value += n.value;
+        countNumber++;
         display.scrollLeft = display.scrollWidth;
+        operatorClicked = false;
+        btnEqual.disabled = false;
+      }
+      else {
+        alert("Você chegou ao maximo de digito (7)");
       }
 
-      function operatorClick(o){
+    }
+
+    function operatorClick(o) {
+
+      if (!operatorClicked) {
         display.value += o.value;
+        countNumber = 0;
         display.scrollLeft = display.scrollWidth;
+        operatorClicked = true;
       }
 
-      function equalClick(){
+    }
+
+    function equalClick() {
         display.value = eval(display.value);
-      }
-      
-    </script>
+    }
 
-  </body>
+    function clearDisplay() {
+      display.value = null;
+      operatorClicked = true;
+      countNumber = 0;
+      btnEqual.disabled = true;
+    }
+
+  </script>
+
+</body>
+
 </html>
