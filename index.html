@@ -8,7 +8,7 @@
 </head>
 
 <body class="flex justify-center">
-
+  
   <!-- mobile-first -->
 
   <main class="flex flex-col max-w-md h-screen">
@@ -23,57 +23,56 @@
           <input class="w-full h-full cursor-pointer " type="button" value="C" onclick="clearDisplay();">
         </div>
         <div class="bg-white flex justify-center items-center text-5xl">
-          <div>
-            < </div>
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="÷" onclick="operatorClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="7" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="8" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="9" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="x" onclick="operatorClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="4" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="5" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="6" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="-" onclick="operatorClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="1" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="2" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="3" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="+" onclick="operatorClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl ">
-            <input class="w-full h-full cursor-pointer" type="button" value="." onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl">
-            <input class="w-full h-full cursor-pointer" type="button" value="0" onclick="numberClick(this);">
-          </div>
-          <div class="bg-white flex justify-center items-center text-5xl col-span-2">
-            <input class="w-full h-full cursor-pointer" id="equal" type="button" value="=" onclick="equalClick();">
-          </div>
+          <input class="w-full h-full cursor-pointer " type="button" value="<" onclick="returnDisplay();">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="÷" onclick="operatorClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="7" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="8" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="9" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="x" onclick="operatorClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="4" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="5" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="6" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="-" onclick="operatorClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="1" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="2" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="3" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="+" onclick="operatorClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl ">
+          <input class="w-full h-full cursor-pointer" type="button" value="." onclick="dotClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl">
+          <input class="w-full h-full cursor-pointer" type="button" value="0" onclick="numberClick(this);">
+        </div>
+        <div class="bg-white flex justify-center items-center text-5xl col-span-2">
+          <input class="w-full h-full cursor-pointer" id="equal" type="button" value="=" onclick="equalClick();">
+        </div>
 
       </section>
     </section>
@@ -86,20 +85,37 @@
 
     btnEqual.disabled = true;
     let operatorClicked = true;
-    let countNumber = 0;
+    let dotClicked = false;
+    let countNumber = display.value.replace(/\D/g, "");
+    let operators = ["+", "-", "X", "÷"];
+
+
+
+
+
+
 
 
 
     function numberClick(n) {
-      if (countNumber < 7) {
+
+      let cut = display.value.split(/[\+\-\X\÷]/);
+
+      let lastNumber = cut[cut.length - 1];
+
+      let countNumber = lastNumber.replace(/\D/g, "");
+
+
+
+      if (countNumber.length < 7) {
         display.value += n.value;
-        countNumber++;
+
         display.scrollLeft = display.scrollWidth;
         operatorClicked = false;
         btnEqual.disabled = false;
       }
       else {
-        alert("Você chegou ao maximo de digito (7)");
+        alert("Você chegou ao maximo de digito por numero (7)");
       }
 
     }
@@ -108,9 +124,9 @@
 
       if (!operatorClicked || o.value === "-" && display.value === "") {
         display.value += o.value;
-        countNumber = 0;
         display.scrollLeft = display.scrollWidth;
         operatorClicked = true;
+        dotClicked = false;
       }
 
     }
@@ -121,14 +137,58 @@
 
       input = input.replace(/x/g, "*").replace(/÷/g, "/");
 
-      display.value = eval(input);
+      if (!input.includes("/0")) {
+        display.value = eval(input);
+         if (dotClicked === false) {
+          dotClicked = true;
+        }
+      }
+      else {
+        alert("Erro Divisão por 0");
+      }
     }
 
     function clearDisplay() {
       display.value = null;
       operatorClicked = true;
-      countNumber = 0;
+
+      if (!display.value.includes(".")) {
+        dotClicked = false;
+      }
+
       btnEqual.disabled = true;
+    }
+
+    function returnDisplay() {
+
+
+      
+
+      if(operators.includes(display.value.slice(-1))){
+         operatorClicked = false;
+      }
+
+      if(display.value.slice(-1) === "."){
+         dotClicked = false;
+         alert("oi bebe");
+      }
+
+      display.value = display.value.slice(0, -1);
+
+      if (display.value === "") {
+        btnEqual.disabled = true;
+      }
+
+
+
+    }
+
+    function dotClick() {
+
+      if (/\d/.test(display.value.slice(-1)) && !dotClicked) {
+        display.value += ".";
+        dotClicked = true;
+      }
     }
 
 
